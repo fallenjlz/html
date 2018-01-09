@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		.div1{
+			width:200px;
+			height: 200px;
+			background:yellow;
+			position: relative;
+			z-index: 1;
+			
+		}
+		.per{
+			width:400px;
+			height: 400px;
+			z-index: 11;
+			position: relative;
+			background-color: black;
+			top:-50px;
+		}
+		.div2{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			z-index: 1;
+			background-color:red;
+			top:0;
+			left:0;
+		}                                   /*如果父元素的层级大于某元素，那么他的子元素的层级也大于这个元素，无视这个子元素本身的层级
+        */
+	</style>
+</head>
+<body>
+	<div class="div1"></div>
+	<div class="per">
+		<div class="div2"></div>
+	</div>
+</body>
+</html>
